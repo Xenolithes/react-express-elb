@@ -7,13 +7,13 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('/', (req, res) => {
-  res.send('flowers smell nice');
+  res.send('GOBLINS!');
 });
 
-app.get('/flower', (req, res) => {
+app.get('/goblin', (req, res) => {
   res.json({
-    name: 'Dandelion',
-    colour: 'Blue-ish'
+    name: 'Goblin',
+    colour: 'Green-ish'
   });
 });
 

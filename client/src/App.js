@@ -5,18 +5,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flower: {}
+      goblin: {}
     }
 
     this.getFlower();
   }
 
   getFlower() {
-    fetch('/flower')
+    fetch('/goblin')
       .then(response => response.json())
       .then(data => {
         this.setState({
-          flower: data
+          goblin: data
         });
       });
   }
@@ -24,8 +24,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.flower.name}</h1>
-        <p>{this.state.flower.colour}</p>
+        <h1>{this.state.goblin.name}</h1>
+        <p>{this.state.goblin.colour}</p>
       </div>
     );
   }

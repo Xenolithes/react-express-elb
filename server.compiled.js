@@ -10,12 +10,12 @@ var PORT = process.env.HTTP_PORT || 4001;
 var app = (0, _express["default"])();
 app.use(_express["default"]["static"](_path["default"].join(__dirname, 'client', 'build')));
 app.get('/', function (req, res) {
-  res.send('flowers smell nice');
+  res.send('GOBLINS!');
 });
-app.get('/flower', function (req, res) {
+app.get('/goblin', function (req, res) {
   res.json({
-    name: 'Dandelion',
-    colour: 'Blue-ish'
+    name: 'Goblins',
+    colour: 'Green-ish'
   });
 });
 app.listen(PORT, function () {
